@@ -1,3 +1,24 @@
+# Grocery List
+
+React shopping list.
+
+### Live Preview: 
+
+## Key Features
+
+- Add items
+- Edit items
+- Remove items
+- Clear all items
+- Alert
+- Local storage
+
+## Technologies Used
+React, CSS3, HTML5
+
+#### Written by Christine Lyston
+#### Date: January 2022
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
