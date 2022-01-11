@@ -15,6 +15,7 @@ function App() {
     console.log('Hello');
     if (!name) {
       //If value is empty display alert
+      showAlert(true, 'Please enter an item', 'error')
     }
     else if (name && isEditing) {
       //If value has something and editing is true
@@ -28,12 +29,17 @@ function App() {
     }
   }
 
+  //Show Alert Function
+  const showAlert = (show = false, msg = "", type = "") => {
+    setAlert({ show, msg, type })
+  }
+
   return (
     <div>
       <section className="section-centre">
         <img src={bread} alt="bread" />
         <form className="grocery-form" onSubmit={handleSubmit}>
-          {alert.show && <Alert />}
+          {alert.show && <Alert {...alert} removeAlert={showAlert} />}
           <h2>Grocery List</h2>
           <div className="form-control">
             <input className="grocery" type="text" placeholder="e.g. milk" value={name} onChange={(e) => setName(e.target.value)} />
@@ -47,7 +53,7 @@ function App() {
             <List items={list} />
             <button className="clear-btn">Clear Items</button>
           </div>
-        )};
+        )}
       </section>
     </div>
   );
