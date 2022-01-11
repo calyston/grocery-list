@@ -13,12 +13,25 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Hello');
+    if (!name) {
+      //If value is empty display alert
+    }
+    else if (name && isEditing) {
+      //If value has something and editing is true
+    }
+    else {
+      //Display alert
+      //Add a new item to the list
+      const newItem = { id: new Date().getTime().toString(), title: name };
+      setList([...list, newItem]);
+      setName('');
+    }
   }
 
   return (
     <div>
       <section className="section-centre">
-        <img src={bread} alt="pan" />
+        <img src={bread} alt="bread" />
         <form className="grocery-form" onSubmit={handleSubmit}>
           {alert.show && <Alert />}
           <h2>Grocery List</h2>
@@ -29,12 +42,13 @@ function App() {
             </button>
           </div>
         </form>
-        <div className="grocery-container">
-          <List />
-          <button className="clear-btn">Clear Items</button>
-        </div>
+        {list.length > 0 && (
+          <div className="grocery-container">
+            <List items={list} />
+            <button className="clear-btn">Clear Items</button>
+          </div>
+        )};
       </section>
-
     </div>
   );
 }
