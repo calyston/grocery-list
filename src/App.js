@@ -85,8 +85,8 @@ function App() {
   }, [list])
 
   return (
-    <div className="container">
-      <section className="section-centre">
+    <div>
+      < section className="section-centre" >
         <img src={bread} alt="bread" />
         <form className="grocery-form" onSubmit={handleSubmit}>
           {alert.show && <Alert {...alert} removeAlert={showAlert} list={list} />}
@@ -98,14 +98,16 @@ function App() {
             </button>
           </div>
         </form>
-        {list.length > 0 && (
-          <div className="grocery-container">
-            <List items={list} removeItem={removeItem} editItem={editItem} />
-            <button className="clear-btn btn btn-danger" onClick={clearList}>Clear Items</button>
-          </div>
-        )}
-      </section>
-    </div>
+        {
+          list.length > 0 && (
+            <div className="grocery-container">
+              <List items={list} removeItem={removeItem} editItem={editItem} />
+              <button className="clear-btn btn btn-danger" onClick={clearList}>Clear Items</button>
+            </div>
+          )
+        }
+      </section >
+    </div >
   );
 }
 

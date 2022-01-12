@@ -6,7 +6,7 @@ const List = ({ items, removeItem, editItem }) => {
     <div className="grocery-list">
       {items.map((item) => {
         const { id, title } = item;
-        return <article key={id} className="grocery-item row row-cols-4">
+        return <article key={id} className="grocery-item row row-cols-2 row-cols-md-3">
           <p className="title col">{title}</p>
           <div className="btn-container col">
             <button className="edit-btn btn btn-outline-success btn-sm" type="button" onClick={() => editItem(id)}><FaEdit /></button>

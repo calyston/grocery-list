@@ -25,18 +25,28 @@ code {
   border: none;
 }
 
-.container {
+.section-centre {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding: 3rem;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
-.container h2 {
+.section-centre h2 {
   text-align: center;
+}
+
+.section-centre img {
+  width: 30%;
+  height: auto;
+  margin: 0 auto;
 }
 
 .input-group {
   padding-top: 1.5rem;
+  max-width: fit-content;
+  margin: 0 auto;
 }
 
 .grocery-container {
@@ -45,8 +55,8 @@ code {
   padding: 1.5rem 0;
 }
 
-.clear-button {
+.clear-btn {
   margin: 0 auto;
-  width: 50%;
+  width: fit-content;
   margin-top: 1.5rem;
 }
