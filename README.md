@@ -1,6 +1,6 @@
 # Grocery List
 
-React shopping list.
+A shopping list made with React.
 
 ### Live Preview: 
 
@@ -14,7 +14,7 @@ React shopping list.
 - Local storage
 
 ## Technologies Used
-React, CSS3, HTML5
+React, Bootstrap, CSS3, HTML5
 
 #### Written by Christine Lyston
 #### Date: January 2022

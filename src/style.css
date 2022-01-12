@@ -14,9 +14,39 @@ code {
 
 /* Alerts */
 .alert-success {
-  background-color: greenyellow;
+  color: white;
+  background-color: #157347;
+  border: none;
 }
 
 .alert-error {
-  background-color: red;
+  color: white;
+  background-color: #bb2d3b;
+  border: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container h2 {
+  text-align: center;
+}
+
+.input-group {
+  padding-top: 1.5rem;
+}
+
+.grocery-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 0;
+}
+
+.clear-button {
+  margin: 0 auto;
+  width: 50%;
+  margin-top: 1.5rem;
 }
