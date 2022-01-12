@@ -15,13 +15,14 @@ function App() {
     console.log('Hello');
     if (!name) {
       //If value is empty display alert
-      showAlert(true, 'Please enter an item', 'error')
+      showAlert(true, 'Please enter an item', 'error');
     }
     else if (name && isEditing) {
       //If value has something and editing is true
     }
     else {
-      //Display alert
+      //If something has been inputted display alert
+      showAlert(true, 'Item added to list', 'success');
       //Add a new item to the list
       const newItem = { id: new Date().getTime().toString(), title: name };
       setList([...list, newItem]);
@@ -32,6 +33,12 @@ function App() {
   //Show Alert Function
   const showAlert = (show = false, msg = "", type = "") => {
     setAlert({ show, msg, type })
+  }
+
+  //Clear List
+  const clearList = () => {
+    showAlert(true, 'List cleared', 'error');
+    setList([]);
   }
 
   return (
@@ -51,7 +58,7 @@ function App() {
         {list.length > 0 && (
           <div className="grocery-container">
             <List items={list} />
-            <button className="clear-btn">Clear Items</button>
+            <button className="clear-btn" onClick={clearList}>Clear Items</button>
           </div>
         )}
       </section>
