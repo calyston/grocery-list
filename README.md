@@ -4,6 +4,8 @@ A shopping list made with React.
 
 ### Live Preview: 
 
+https://calyston-grocerylist.netlify.app/
+
 ## Key Features
 
 - Add items
